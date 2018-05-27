@@ -1,6 +1,5 @@
 // list all countries in browser
 
-
 const RequestHelper = require('../helpers/request_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
@@ -23,7 +22,7 @@ Countries.prototype.bindEvents = function () {
     //get all info from this countryName
     console.log(`CountryListView:country-clicked ${evt.detail}`);
     const individualCountry = this.countriesData[evt.detail];
-    
+
     PubSub.publish('Countries:individual-country', individualCountry);
 
   });

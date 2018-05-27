@@ -1,7 +1,7 @@
 const PubSub = require('../helpers/pub_sub.js');
 
-const CapitalView = function (capitalContainer) {
-  this.capitalContainer = capitalContainer //will be ul #capital-view element
+const CapitalView = function (ulContainer) {
+  this.ulContainer = ulContainer //will be ul #capital-view element
 };
 
 CapitalView.prototype.bindEvents = function () {
@@ -11,7 +11,7 @@ CapitalView.prototype.bindEvents = function () {
 };
 
 CapitalView.prototype.renderCapitalView = function (country) {
-  this.capitalContainer.liEmelent =' ';
+  this.ulContainer.liElement =' ';
 
   const countryCapital = document.createElement('li');
   countryCapital.textContent = `Country ${country.name} has the capital ${country.capital}`
